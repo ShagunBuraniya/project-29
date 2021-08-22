@@ -15,15 +15,19 @@ class Slingshot{
         this.sling.bodyA =null;
     }
 
+    attach(body){
+        this.sling.bodyA=body;
+    }
+
     display(){
         if(this.sling.bodyA){
             var pointA = this.sling.bodyA.position;
             var pointB = this.pointB;
             
+            strokeWeight(4);
             stroke(64,224,208);
             if(pointA.x < 220){
-            strokeWeight(4);
-            line(pointA.x-20, pointA.y,pointB.x-10,pointB.y);
+            line(pointA.x,pointA.y, pointB.x,pointB.y);
             }
             
            // write stroke() to set the color to red

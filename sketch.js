@@ -70,7 +70,7 @@ function draw() {
   background(56,44,44); 
  
   imageMode(CENTER);
-  image(rock_img,80,220,20,20)
+  image(rock_img ,ball.position.x,ball.position.y,40,40);
   // write image() to display the polygon image 
   //use the same x and y position as ball
   
@@ -132,4 +132,15 @@ function mouseDragged(){
 }
 function mouseReleased(){
   slingShot.fly();
+}
+
+function keyPressed(){
+  if(keyCode===LEFT_ARROW){
+    value = 255;
+  }else if(keyCode===RIGHT_ARROW){
+    value = 0;
+  }
+  {
+      slingShot.attach(this.ball);
+  }
 }
